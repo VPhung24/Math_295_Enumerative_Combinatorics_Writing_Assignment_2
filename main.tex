@@ -1,0 +1,66 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{Writing Assignment 2}%replace X with the appropriate number
+\author{Vivian Phung\\ \\ %replace with your name
+MATH 295 - Enumerative Combinatorics\\With Professor Amy Myers} 
+
+\maketitle
+ 
+
+\textbf{Section 5.3 Exercise 2:} How many ways are there to arrange the letters in STATISTICAL? \
+\begin{itemize}
+  \item 2 S, 3 T, 2 A, 2 I, 1 C, 1 L
+  \item 11 letters in total in STATISTICAL, 6 different types of letters
+\end{itemize}
+According to Theorem 5.3.1, the number of arrangements of these $n$ objects is $P(11; 2, 3, 2, 2, 1, 1)$ which is
+\begin{align*}
+= \frac{11!}{2! \cdot 3! \cdot 2! \cdot 2! \cdot 1! \cdot 1!}
+\end{align*}Without Theorem 5.3.1, the problem can also be solved like this
+\begin{itemize}
+  \item Choose 2 from 11 positions for S: $\binom{11}{2}$ different ways
+  \item and then choose 3 from 9 remaining positions for T: $\binom{9}{3}$ ways
+  \item and then choose 2 from 6 remaining positions for A: $\binom{6}{2}$ ways
+  \item and then choose 2 from 4 remaining positions for I: $\binom{4}{2}$ ways
+  \item and then choose 1 from 2 remaining positions for C: $\binom{2}{1}$ ways
+  \item and then choose 1 from 1 remaining positions for L: $\binom{1}{1}$ ways
+\end{itemize}The answer is
+\begin{align*}
+= \binom{11}{2} \cdot \binom{9}{3} \cdot \binom{6}{2} \cdot \binom{4}{2} \cdot \binom{2}{1} \cdot \binom{1}{1}
+\end{align*} \\which is equivalent to the solution using Theorem 5.3.1
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}
